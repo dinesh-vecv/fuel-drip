@@ -2,6 +2,8 @@ from flask import Flask, render_template, request
 import pandas as pd
 import folium
 from datetime import datetime, timedelta
+import pyarrow
+import fastparquet
 
 
 app = Flask(__name__)
