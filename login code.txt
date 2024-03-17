@@ -1,0 +1,35 @@
+
+# Function to check if the username and password are valid
+def is_valid(username, password):
+    with open('users.csv', 'r') as file:
+        reader = csv.reader(file)
+        for row in reader:
+            if row[0] == username and row[1] == password:
+                return True
+    return False
+
+
+@app.route('/')
+def index():
+    if 'username' in session:
+        return render_template('index.html', username=session['username'], device_id=unique_device_id)
+    return redirect(url_for('login'))
+
+# Login route
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        if is_valid(username, password):
+            session['username'] = username
+            return redirect(url_for('index'))
+        else:
+            return render_template('login.html', message='Invalid username or password')
+    return render_template('login.html')
+
+# Logout route
+@app.route('/logout')
+def logout():
+    session.pop('username', None)
+    return redirect(url_for('index'))

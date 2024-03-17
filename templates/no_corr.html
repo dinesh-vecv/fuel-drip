@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Coordinates Found</title>
+</head>
+<body>
+
+    <style>
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+        .card {
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.card h1 {
+    margin-top: 0;
+}
+
+.card p {
+    margin-bottom: 20px;
+}
+
+.card a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+    </style>
+    <div class="container">
+        <div class="card">
+            <h1>No Coordinates Found</h1>
+            <p>No coordinates were found for the selected device ID and date range.</p>
+            <a href="{{ url_for('index') }}">Back to Home</a>
+        </div>
+    </div>
+
+</body>
+</html>

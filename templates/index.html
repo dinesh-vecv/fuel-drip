@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style-index.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="left-column">
+            <h1>Fuel Drip Detection</h1>
+            <div class="filter-form">
+                <form action="/generate_map" method="post">
+                    <select name="device_id">
+                        {% for device_id in device_id_options %}
+                        <option value="{{ device_id }}">{{ device_id }}</option>
+                        {% endfor %}
+                    </select>
+                    <label for="start_date">Start Date:</label>
+                    <input type="date" id="start_date" name="start_date" required>
+                     <label for="end_date">End Date:</label>
+                    <input type="date" id="end_date" name="end_date" required>
+                    <button type="submit">Generate Map</button>
+                </form>
+            </div>
+            
+        </div>
+        <div class="right-column">
+            <div class="navbar">
+                <div class="nav-item">
+                    <a>Welcome!</a>
+                </div>
+                <div class="nav-item">
+                    <a href="#">Home</a>
+                </div>
+            </div>
+            <div class="map">
+                {{map_html|safe}}
+            </div>
+           
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+/* style.css */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: whitesmoke;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-item {
+    margin-left: 20px;
+}
+
+.nav-item a {
+    color: white;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    height: 100vh; /* Adjusted height */
+}
+
+.left-column {
+    flex: 2;
+    background-color: whitesmoke;
+    height: 100%;
+    width: 20%; /* Set width to 20% */
+}
+
+
+
+.filter-form {
+    margin: 50px auto;
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow for better visibility */
+    transition: box-shadow 0.3s ease; /* Smooth transition for box-shadow */
+    
+  }
+  .filter-form:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Hover effect on form */
+  }
+  .filter-form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  .filter-form select, .filter-form button {
+    width: 100%;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.9); /* Transparent white background for select and button */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+  }
+  .filter-form select:focus, .filter-form button:focus {
+    outline: none;
+    border-color: #007bff; /* Change border color on focus */
+  }
+  .filter-form select:hover, .filter-form button:hover {
+    background-color: rgba(255, 255, 255, 1); /* Lighten background color on hover */
+  }
+  .filter-form button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+  }
+  .filter-form button:hover {
+    background-color: #0056b3; /* Darken background color on hover */
+  }
+
+.right-column {
+    flex: 8; /* Adjusted flex value */
+    background-color: #f0f0f0; /* Different background color */
+    text-align: right;
+    height: 100%;
+}
+
+.container h1 {
+    font-size: 24px;
+    color: black; /* Text color for left column */
+    margin: 0; /* Reset margin */
+    padding: 20px; /* Add padding */
+}
+
+.container a {
+    color:black;
+    text-decoration: none;
+}
+
+.container a:hover {
+    text-decoration: underline;
+}
+
+.map{
+    width: 1200px;
+    height: 800px;
+}
+
+h1{
+    text-align: center;
+}
