@@ -1,4 +1,7 @@
 Flask
 pandas
 folium
+pyarrow
+fastparquet
 gunicorn
+
